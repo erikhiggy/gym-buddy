@@ -6,6 +6,8 @@ import { PageLayout } from '@/components/page-layout'
 import { prisma } from '@/lib/prisma'
 import { Calendar, Clock, Trophy, TrendingUp, Repeat } from 'lucide-react'
 
+export const dynamic = 'force-dynamic'
+
 async function getWorkoutHistory() {
   const completions = await prisma.workoutCompletion.findMany({
     include: {

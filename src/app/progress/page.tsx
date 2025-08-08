@@ -4,6 +4,8 @@ import { PageLayout } from '@/components/page-layout'
 import { prisma } from '@/lib/prisma'
 import { TrendingUp, Calendar, Target, Award, Clock, Flame } from 'lucide-react'
 
+export const dynamic = 'force-dynamic'
+
 async function getProgressStats() {
   const now = new Date()
   const oneWeekAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000)
