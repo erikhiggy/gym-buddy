@@ -175,7 +175,7 @@ export function validateUpdateWorkout(data: any): UpdateWorkoutRequest {
     result.name = sanitizeString(data.name);
   }
   if (data.description !== undefined) {
-    result.description = data.description ? sanitizeString(data.description) : null;
+    result.description = data.description ? sanitizeString(data.description) : undefined;
   }
   if (data.category !== undefined) {
     result.category = data.category.toLowerCase();
@@ -249,10 +249,10 @@ export function validateUpdateExercise(data: any): UpdateExerciseData {
 
   if (data.id !== undefined) result.id = data.id;
   if (data.name !== undefined) result.name = sanitizeString(data.name);
-  if (data.reps !== undefined) result.reps = data.reps ? parseInt(data.reps) : null;
-  if (data.sets !== undefined) result.sets = data.sets ? parseInt(data.sets) : null;
-  if (data.duration !== undefined) result.duration = data.duration ? sanitizeString(data.duration) : null;
-  if (data.notes !== undefined) result.notes = data.notes ? sanitizeString(data.notes) : null;
+  if (data.reps !== undefined) result.reps = data.reps ? parseInt(data.reps) : undefined;
+  if (data.sets !== undefined) result.sets = data.sets ? parseInt(data.sets) : undefined;
+  if (data.duration !== undefined) result.duration = data.duration ? sanitizeString(data.duration) : undefined;
+  if (data.notes !== undefined) result.notes = data.notes ? sanitizeString(data.notes) : undefined;
   if (data.order !== undefined) result.order = parseInt(data.order);
   if (data._action !== undefined) result._action = data._action;
 

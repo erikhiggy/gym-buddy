@@ -20,7 +20,7 @@ export const WORKOUT_CATEGORIES = [
 export type WorkoutCategory = typeof WORKOUT_CATEGORIES[number]
 
 interface CategoryFilterProps {
-  categories?: string[]
+  categories?: readonly string[]
   selectedCategory?: string | null
   onCategorySelect: (category: string | null) => void
   showAll?: boolean

@@ -397,7 +397,7 @@ function ExerciseFormItem({
                   type="number"
                   min="1"
                   {...register(`exercises.${index}.sets`, { 
-                    setValueAs: (v) => v === '' ? null : parseInt(v) 
+                    setValueAs: (v: string) => v === '' ? null : parseInt(v) 
                   })}
                   placeholder="3"
                 />
@@ -408,7 +408,7 @@ function ExerciseFormItem({
                   type="number"
                   min="1"
                   {...register(`exercises.${index}.reps`, { 
-                    setValueAs: (v) => v === '' ? null : parseInt(v) 
+                    setValueAs: (v: string) => v === '' ? null : parseInt(v) 
                   })}
                   placeholder="10"
                 />
