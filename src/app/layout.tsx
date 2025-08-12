@@ -25,12 +25,7 @@ export default function RootLayout({
 			<body
 				className={`${inter.variable} antialiased min-h-screen bg-background font-sans`}
 			>
-				<ThemeProvider
-					attribute='class'
-					defaultTheme='light'
-					enableSystem
-					disableTransitionOnChange
-				>
+				<ThemeProvider attribute='class' enableSystem disableTransitionOnChange>
 					<div className='relative flex min-h-screen flex-col'>
 						<div className='flex justify-end p-4'>
 							<ThemeToggle />
